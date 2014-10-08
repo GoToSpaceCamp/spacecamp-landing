@@ -1,11 +1,15 @@
 body {
   font-family: 'Exo 2', helvetica, arial, sans-serif;
   font-size: 20px;
+  /*font-size: 5vw;*/
   text-align: center;
   color: #fff;
   background-color: #5432c1;
   background: linear-gradient(#327bc1, #5432c1);
 }
+
+::-moz-selection { background: #B3B2E5; color: #fff; }
+::selection { background: #B3B2E5; color: #fff; }
 
 @-webkit-keyframes STAR-MOVE {
   from {
@@ -63,6 +67,7 @@ h2 {
   line-height: 40px;
   margin: 12px 0;
   color: #ABA8E1;
+  font-weight: 100;
 }
 
 form {
@@ -74,10 +79,11 @@ input {
   display: inline-block;
   background: #fff;
   background-color: rgba(255, 255, 255, 0.3);
-  border: 3px solid #fff;
+  border: 1px solid #fff;
   border-radius: 3px;
-  padding: 10px;
+  padding: 16px;
   vertical-align: top;
+  margin-bottom: 6px;
 }
   input::-webkit-input-placeholder {
      color: #B3B2E5;
@@ -97,6 +103,8 @@ input {
 
   input:focus {
     outline: none;
+    box-shadow: 0 0 50px #327bc1;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
 button {
@@ -112,15 +120,16 @@ button {
   transition: border-color 0.5s;
   background: #313131;
   color: #fff;
-  border: 3px solid #B3B2E5;
+  border: 1px solid #B3B2E5;
   border-radius: 3px;
-  padding: 10px 20px;
+  padding: 16px 32px;
 }
   button:focus {
     outline: none;
   }
   button:hover {
     border-color: #fff;
+    background: #5432c1;
     cursor: pointer;
   }
 
@@ -142,3 +151,21 @@ a {
   a img {
     vertical-align: middle;
   }
+
+
+@media screen and (max-width: 768px){
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  form {
+    font-size: 16px;
+  }
+}
