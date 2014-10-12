@@ -1,11 +1,27 @@
+*, *:focus, *:active {
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 body {
   font-family: 'Exo 2', helvetica, arial, sans-serif;
-  font-size: 20px;
-  /*font-size: 5vw;*/
+  font-size: 16px;
+  letter-spacing: 4px;
+  font-weight: 100;
+  text-transform: uppercase;
   text-align: center;
   color: #fff;
-  background-color: #5432c1;
-  background: linear-gradient(#327bc1, #5432c1);
+  background-color: #7474BF;
+  /*background: linear-gradient(#327bc1, #5432c1);*/
+
+  background: -webkit-linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+  background:    -moz-linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+  background:     -ms-linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+  background:      -o-linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+  background:         linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
 }
 
 ::-moz-selection { background: #B3B2E5; color: #fff; }
@@ -24,25 +40,25 @@ body {
 
 .stars-layer-1 {
   background: url(images/stars-layer-1.png) repeat 20% 20%;
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 200;
 
   -webkit-animation-name: STAR-MOVE;
-  -webkit-animation-duration: 300s;
-  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 800s;
+  -webkit-animation-timing-function: ease-out;
   -webkit-animation-iteration-count: infinite;
 }
 
 .stars-layer-2 {
   background: url(images/stars-layer-2.png) repeat 35% 35%;
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 300;
 
   -webkit-animation-name: STAR-MOVE;
-  -webkit-animation-duration: 150s;
-  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 400s;
+  -webkit-animation-timing-function: ease-out;
   -webkit-animation-iteration-count: infinite;
 }
 
@@ -57,22 +73,30 @@ img.logo {
 }
 
 h1 {
-  font-size: 100px;
-  line-height: 100px;
+  font-size: 80px;
+  line-height: 80px;
   margin: 0;
+  font-weight: 300;
+  letter-spacing: 16px;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 24px;
   line-height: 40px;
-  margin: 12px 0;
-  color: #ABA8E1;
+  margin: 0 0 12px 0;
+  color: #B0C6ED;
   font-weight: 100;
 }
 
 form {
   padding: 24px 0;
-  font-size: 30px;
+}
+
+input, button {
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 input {
@@ -81,24 +105,26 @@ input {
   background-color: rgba(255, 255, 255, 0.3);
   border: 1px solid #fff;
   border-radius: 3px;
-  padding: 16px;
+  padding: 24px;
   vertical-align: top;
   margin-bottom: 6px;
+  transition: all 0.5s;
+  width: 300px;
 }
   input::-webkit-input-placeholder {
-     color: #B3B2E5;
+     color: #fff;
   }
   input:-moz-placeholder {
-     color: #B3B2E5;
+     color: #fff;
   }
   input::-moz-placeholder {
-     color: #B3B2E5;
+     color: #fff;
   }
   input:-ms-input-placeholder {
-     color: #B3B2E5;
+     color: #fff;
   }
   input:placeholder {
-     color: #B3B2E5;
+     color: #fff;
   }
 
   input:focus {
@@ -117,19 +143,19 @@ button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  transition: border-color 0.5s;
+  transition: all 0.5s;
   background: #313131;
   color: #fff;
   border: 1px solid #B3B2E5;
   border-radius: 3px;
-  padding: 16px 32px;
+  padding: 24px 32px;
 }
   button:focus {
     outline: none;
   }
   button:hover {
     border-color: #fff;
-    background: #5432c1;
+    background: #7474BF;
     cursor: pointer;
   }
 
@@ -139,9 +165,9 @@ button {
 }
 
 a {
-  color: #ABA8E1;
+  color: #B0C6ED;
   text-decoration: none;
-  transition: color 0.5s;
+  transition: all 0.5s;
 }
   a:hover {
     color: #fff;
