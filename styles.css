@@ -10,12 +10,12 @@ body {
   font-family: 'Exo 2', helvetica, arial, sans-serif;
   font-size: 16px;
   letter-spacing: 4px;
-  font-weight: 100;
+  font-weight: 200;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
   background-color: #7474BF;
-  /*background: linear-gradient(#327bc1, #5432c1);*/
+  -webkit-font-smoothing: antialiased;
 
   background: -webkit-linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
   background:    -moz-linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
@@ -84,8 +84,8 @@ h2 {
   font-size: 24px;
   line-height: 40px;
   margin: 0 0 12px 0;
-  color: #B0C6ED;
-  font-weight: 100;
+  color: #fff;
+  font-weight: 200;
 }
 
 form {
@@ -95,7 +95,7 @@ form {
 input, button {
   font-size: 18px;
   letter-spacing: 4px;
-  font-weight: 100;
+  font-weight: 200;
   text-transform: uppercase;
 }
 
@@ -184,7 +184,7 @@ a {
     font-size: 16px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 50px;
     line-height: 60px;
   }
   h2 {
@@ -193,5 +193,12 @@ a {
   }
   form {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 420px){
+  h1 {
+    font-size: 30px;
+    line-height: 60px;
   }
 }
